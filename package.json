@@ -1,0 +1,40 @@
+{
+  "name": "nimc_verification_react_native",
+  "version": "1.0.0",
+  "description": "Easily plug NIMC Verification service into your react-native app for verifications.",
+  "main": "index.js",
+  "author": "NIMC",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "native",
+    "mobile",
+    "NIMC"
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.66.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "2.5.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
